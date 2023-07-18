@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Recommendation</title>
+  
+  <script type="module" crossorigin src="/assets/index-8c83fc18.js"></script>
+  <link rel="stylesheet" href="/assets/index-4adf020c.css">
+</head>
+<body>
+  <h1>Plant Recommendation</h1>
+  
+  <form id="plantForm">
+    <div class="question">
+      <label for="place">¿Dónde vas a colocar tu planta?</label>
+      <div class="options">
+        <input type="radio" id="placeInsideIndirect" name="place" value="inside_indirect">
+        <label for="placeInsideIndirect">Dentro con luz indirecta moderada</label>
+      
+        <input type="radio" id="placeInsideLot" name="place" value="inside_lot">
+        <label for="placeInsideLot">Dentro con mucha luz indirecta</label>
+      
+        <input type="radio" id="placeOutside" name="place" value="outside">
+        <label for="placeOutside">Exterior</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <label for="sunlight">¿Recibirá luz solar directa?</label>
+      <div class="options">
+        <input type="radio" id="sunlightYes" name="sunlight" value="yes">
+        <label for="sunlightYes">Sí</label>
+      
+        <input type="radio" id="sunlightNo" name="sunlight" value="no">
+        <label for="sunlightNo">No</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <label for="pets">¿Tienes mascotas (gatos o perros)?</label>
+      <div class="options">
+        <input type="radio" id="petsYes" name="pets" value="yes">
+        <label for="petsYes">Sí</label>
+      
+        <input type="radio" id="petsNo" name="pets" value="no">
+        <label for="petsNo">No</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <label for="water">¿Sueles regar en exceso o insuficiente?</label>
+      <div class="options">
+        <input type="radio" id="waterOver" name="water" value="overwater">
+        <label for="waterOver">Riego en exceso</label>
+      
+        <input type="radio" id="waterUnder" name="water" value="underwater">
+        <label for="waterUnder">Riego insuficiente</label>
+      
+        <input type="radio" id="waterNeither" name="water" value="neither">
+        <label for="waterNeither">Ninguno / No lo sé</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <label for="style">¿Cómo defines tu estilo?</label>
+      <div class="options">
+        <input type="radio" id="styleMinimalism" name="style" value="minimalism">
+        <label for="styleMinimalism">Me gusta el minimalismo y los colores naturales</label>
+      
+        <input type="radio" id="styleDecoration" name="style" value="decoration">
+        <label for="styleDecoration">Me gusta una decoración sencilla y colores simples</label>
+      
+        <input type="radio" id="styleBrightColors" name="style" value="bright_colors">
+        <label for="styleBrightColors">Me gusta una decoración abundante y colores brillantes</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <label for="extras">¿Quieres añadir elementos extras a tu planta?</label>
+      <div class="options">
+        <input type="checkbox" id="extrasMossPole" name="extras" value="moss_pole">
+        <label for="extrasMossPole">Palo de musgo</label>
+      
+        <input type="checkbox" id="extrasPebbles" name="extras" value="pebbles">
+        <label for="extrasPebbles">Gravilla</label>
+      
+        <input type="checkbox" id="extrasMiniPlants" name="extras" value="mini_plants">
+        <label for="extrasMiniPlants">Plantas más pequeñas</label>
+      </div>
+    </div>
+    
+    <div class="buttons">
+      <button type="submit" id="getPlantButton">¡Obtener tu planta!</button>
+      <button type="button" id="clearButton">Limpiar</button>
+    </div>
+  </form>
+  
+  <div id="recommendation"></div>
+
+  
+</body>
+</html>
