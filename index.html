@@ -77,13 +77,13 @@
     <div class="question">
       <label for="extras">¿Quieres añadir elementos extras a tu planta?</label>
       <div class="options">
-        <input type="checkbox" id="extrasMossPole" name="extras" value="moss_pole">
+        <input type="checkbox" id="extrasMossPole" name="extras" value="moss-pole">
         <label for="extrasMossPole">Palo de musgo</label>
       
         <input type="checkbox" id="extrasPebbles" name="extras" value="pebbles">
         <label for="extrasPebbles">Gravilla</label>
       
-        <input type="checkbox" id="extrasMiniPlants" name="extras" value="mini_plants">
+        <input type="checkbox" id="extrasMiniPlants" name="extras" value="mini-plants">
         <label for="extrasMiniPlants">Plantas más pequeñas</label>
       </div>
     </div>
@@ -94,7 +94,13 @@
     </div>
   </form>
   
-  <div id="recommendation"></div>
+  <div id="recommendation">
+    <div id="potImageContainer"></div>
+    <div id="extrasContainer"></div>
+    <div id="soilImageContainer"></div>
+    <div id="plantImageContainer"></div>
+    <div id="recommendationInfo"></div>
+  </div>
 
   <script src="/JavaScript/script.js" type="module"></script>
 </body>

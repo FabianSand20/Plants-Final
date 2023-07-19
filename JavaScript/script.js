@@ -5,6 +5,11 @@ import { PlantBuilder } from './Modules/plantBuilder.js';
 document.addEventListener('DOMContentLoaded', function() {
   const plantForm = document.getElementById('plantForm');
   const recommendationContainer = document.getElementById('recommendation');
+  const potImageContainer = document.getElementById('potImageContainer');
+  const plantImageContainer = document.getElementById('plantImageContainer');
+  const soilImageContainer = document.getElementById('soilImageContainer');
+  const extrasContainer = document.getElementById('extrasContainer');
+  const recommendationInfo = document.getElementById('recommendationInfo');
 
   plantForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -72,36 +77,50 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function showRecommendation(recommendation) {
+    // Clear previous recommendation
+    potImageContainer.innerHTML = '';
+    plantImageContainer.innerHTML = '';
+    soilImageContainer.innerHTML = '';
+    extrasContainer.innerHTML = '';
+    recommendationInfo.innerHTML = '';
+
+    // Create and append pot image
     const potImage = document.createElement('img');
     potImage.src = `assets/images/${recommendation.potImage}.png`;
+    potImageContainer.appendChild(potImage);
 
+    // Create and append plant image
     const plantImage = document.createElement('img');
     plantImage.src = `assets/images/${recommendation.plantImage}.png`;
+    plantImageContainer.appendChild(plantImage);
 
+    // Create and append soil image
     const soilImage = document.createElement('img');
     soilImage.src = `assets/images/${recommendation.soilImage}.png`;
+    soilImageContainer.appendChild(soilImage);
 
+    // Create and append extras images
     recommendation.extras.forEach(extra => {
       const extraImage = document.createElement('img');
       extraImage.src = `assets/images/${extra}.png`;
-      recommendationContainer.appendChild(extraImage);
+      extrasContainer.appendChild(extraImage);
     });
 
-    recommendationContainer.innerHTML = '';
-    recommendationContainer.appendChild(potImage);
-    recommendationContainer.appendChild(plantImage);
-    recommendationContainer.appendChild(soilImage);
+    // Create recommendation info
+    const recommendationText = document.createElement('h2');
+    recommendationText.textContent = recommendation.name;
+    recommendationInfo.appendChild(recommendationText);
 
-    const recommendationInfo = document.createElement('div');
-    recommendationInfo.innerHTML = `
-      <h2>${recommendation.name}</h2>
-      <p>Suelo: ${recommendation.soil}</p>
-      <p>Maceta: ${recommendation.pot}</p>
-      <p>Color: ${recommendation.color}</p>
-      <p>Extras: ${recommendation.extras.join(', ')}</p>
+    const recommendationDetails = document.createElement('p');
+    recommendationDetails.innerHTML = `
+      Suelo: ${recommendation.soil}<br>
+      Maceta: ${recommendation.pot}<br>
+      Color: ${recommendation.color}<br>
+      Extras: ${recommendation.extras.join(', ')}
     `;
-    recommendationContainer.appendChild(recommendationInfo);
+    recommendationInfo.appendChild(recommendationDetails);
 
+    // Display recommendation container
     recommendationContainer.style.display = 'block';
   }
 });
