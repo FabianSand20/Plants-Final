@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Plant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Customize Plant</h1>
+  
+  <form id="customizeForm">
+    <div class="form-group">
+      <label for="choosePot">Choose your pot:</label>
+      <div class="options">
+        <input type="radio" id="clayPot" name="choosePot" value="clay">
+        <label for="clayPot">Clay</label>
+      
+        <input type="radio" id="ceramicPot" name="choosePot" value="ceramic">
+        <label for="ceramicPot">Ceramic</label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="potDecorations">Pot decorations:</label>
+      <div class="options">
+        <input type="checkbox" id="potDecorationsToggle" name="potDecorationsToggle">
+        <label for="potDecorationsToggle">Yes / No</label>
+      </div>
+    </div>
+    
+    <div class="form-group" id="potColorGroup">
+      <label for="potColor">Pot color:</label>
+      <div class="options">
+        <input type="checkbox" id="potColorToggle" name="potColorToggle">
+        <label for="potColorToggle">Yes / No</label>
+      </div>
+    </div>
+    
+    <div class="form-group" id="potColorOptions">
+      <input type="radio" id="blueColor" name="potColor" value="blue">
+      <label for="blueColor">Blue</label>
+      
+      <input type="radio" id="pinkColor" name="potColor" value="pink">
+      <label for="pinkColor">Pink</label>
+      
+      <input type="radio" id="greenColor" name="potColor" value="green">
+      <label for="greenColor">Green</label>
+      
+      <input type="radio" id="purpleColor" name="potColor" value="purple">
+      <label for="purpleColor">Purple</label>
+    </div>
+    
+    <div class="form-group">
+      <label for="choosePlant">Choose your plant:</label>
+      <select id="choosePlant" name="choosePlant">
+        <option value="Aglaonema Silver Bay">Aglaonema Silver Bay</option>
+        <option value="Aloe Vera">Aloe Vera</option>
+        <option value="Boston Fern">Boston Fern</option>
+        <option value="Cactus">Cactus</option>
+        <option value="Monstera Deliciosa">Monstera Deliciosa</option>
+        <option value="Peace Lily">Peace Lily</option>
+        <option value="Sansevieria">Sansevieria</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="chooseSoil">Choose your soil:</label>
+      <div class="options">
+        <input type="radio" id="basicSoil" name="chooseSoil" value="Basic composted soil">
+        <label for="basicSoil">Basic composted soil</label>
+      
+        <input type="radio" id="premiumSoil" name="chooseSoil" value="Premium fertilized soil">
+        <label for="premiumSoil">Premium fertilized soil</label>
+      
+        <input type="radio" id="drainageSoil" name="chooseSoil" value="Easy drainage soil">
+        <label for="drainageSoil">Easy drainage soil</label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="chooseExtras">Choose your extras:</label>
+      <div class="options">
+        <input type="checkbox" id="mossPole" name="chooseExtras" value="Moss pole">
+        <label for="mossPole">Moss pole</label>
+      
+        <input type="checkbox" id="pebbles" name="chooseExtras" value="Pebbles">
+        <label for="pebbles">Pebbles</label>
+      
+        <input type="checkbox" id="smallerPlants" name="chooseExtras" value="Smaller plants">
+        <label for="smallerPlants">Smaller plants</label>
+      </div>
+    </div>
+    
+    <button type="submit" id="customizeButton">Customize Plant</button>
+  </form>
+  
+  <div id="customizePreview">
+    <h2 id="customizeTitle">Preview:</h2>
+    <div id="customizePotImageContainer"></div>
+    <div id="customizeExtrasContainer"></div>
+    <div id="customizeSoilImageContainer"></div>
+    <div id="customizePlantImageContainer"></div>
+    <div id="customizeInfo"></div>
+  </div>
+
+  <script src="/JavaScript/customize.js" type="module"></script>
+</body>
+</html>
